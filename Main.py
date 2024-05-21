@@ -1,25 +1,33 @@
-from Bird import *
-from Falcon import *
-from Pigeon import *
-from Duck import *
-p = Pigeon()
-f = Falcon()
-d = Duck()
+# Peter Van Horn
+# 05/21/2024
+# Factory Design Pattern
 
-# print (p.__class__)
-# classes = p.__class__
-# print(classes.__name__)
-firstMessage = "Hello, World!"
-print(firstMessage)
+from FalconFactory import *
+from PigeonFactory import *
+from DuckFactory import *
 
-f.fly()
-f.talk()
-f.hunt()
+print("Hello, World!")
 
-p.fly()
-p.talk()
-p.carry_a_message()
+faFactory = FalconFactory()
+piFactory = PigeonFactory()
+duFactory = DuckFactory()
 
-d.fly()
-d.talk()
-d.swim()
+falcon = faFactory.create_bird()
+pigeon = piFactory.create_bird()
+duck = duFactory.create_bird()
+
+print(falcon.fly())
+print(falcon.talk())
+print(falcon.hunt())
+
+print("")
+
+print(pigeon.fly())
+print(pigeon.talk())
+print(pigeon.carry_a_message())
+
+print("")
+
+print(duck.fly())
+print(duck.talk())
+print(duck.swim())

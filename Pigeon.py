@@ -1,4 +1,15 @@
+# Peter Van Horn
+# 05/21/2024
+# Factory Design Pattern
+
 from Bird import *
+
 class Pigeon(Bird):
+    def fly(self):
+        return "Pigeon flies!!"
+    
+    def talk(self):
+        return "Pigeon talks!!"
+
     def carry_a_message(self):
-        print("The Pigeon carries a message")
+        return "Pigeon carries a message!!"

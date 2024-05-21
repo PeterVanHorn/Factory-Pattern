@@ -3,11 +3,9 @@
 # Factory Design Pattern
 
 from abc import ABC, abstractmethod
+from Bird import *
 
-class Bird(ABC):
+class BirdFactory(ABC):
     @abstractmethod
-    def fly(self):
-        pass
-
-    def talk(self):
+    def create_bird(self):
         pass
